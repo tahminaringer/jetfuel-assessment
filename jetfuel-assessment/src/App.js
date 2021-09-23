@@ -1,5 +1,6 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Forecast from './components/Forecast/Forecast';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <main>
         {/* add weather fetching component */}
+        <Forecast />
       </main>
       <footer>
         Page created by Tahmina Ringer

@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Forecast = () => {
 
+  //We expect the future value to be JSON so setting the start value to empty object
+  let {responseObj, setResponsObj} = useState({});
   function getForecast() {
     //weather data fetch fuction retrieves information from the weather API
     fetch("https://community-open-weather-map.p.rapidapi.com/weather?q=Seattle", {
@@ -11,8 +13,9 @@ const Forecast = () => {
 		"x-rapidapi-key": "8dc75344c5mshe85009142aa7aa1p1c158cjsn8838f68c04d1"
 	}
 })
+.then(response => response.json())
 .then(response => {
-	console.log(response);
+  setResponsObj(response)
 })
 .catch(err => {
 	console.error(err);
