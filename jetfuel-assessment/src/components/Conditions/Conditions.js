@@ -1,4 +1,5 @@
 import React from "react";
+import classes from './Conditions.css'
 
 
 //accessing data from the responseObj inside the props obj
@@ -6,7 +7,7 @@ import React from "react";
 const Conditions = (props) => {
   return (
     // JSON.stringify(props.responseObj)
-    <div>
+    <div className={classes.Wrapper}>
       {props.responseObj.cod !== undefined ?
         <div>
           {console.log("console logging props",props)}

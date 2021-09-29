@@ -22,12 +22,7 @@ const uriEncodeCity = encodeURIComponent(city);
         "x-rapidapi-key": "8dc75344c5mshe85009142aa7aa1p1c158cjsn8838f68c04d1"
       }
     })
-    // .then(response => {
-    //   console.log(response);
-    // })
-    // .catch(err => {
-    //   console.error(err);
-    // });
+
 .then(response => {console.log("response", response);return response.json()})
 
 .then(response => {
